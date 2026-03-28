@@ -24,9 +24,11 @@ def test_rev_shell_cli_success(mocker):
 def test_rev_shell_cli_error(mocker):
     from rev_shell.cli import main
 
-    mocker.patch('rev_shell.cli.ShellConfig', side_effect=ValueError('Invalid Port'))
+    mocker.patch('rev_shell.cli.ShellConfig', side_effect=ValueError('Configuration Error'))
+    mocker.patch('rev_shell.cli.setup_logger')  # Prevent logs from hitting stdout
 
     runner = CliRunner()
-    result = runner.invoke(main, ['--port', 'not-a-number'])
+    result = runner.invoke(main, ['--port', '99999'])
 
+    assert result.exit_code != 0
     assert 'Configuration Error' in result.output

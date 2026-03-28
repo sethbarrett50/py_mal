@@ -1,3 +1,5 @@
+import sys
+
 import click
 
 from rev_shell.client import ShellClient
@@ -19,6 +21,7 @@ def main(**kwargs):
         client.start()
     except Exception as e:
         click.secho(f'Configuration Error: {e}', fg='red')
+        sys.exit(1)
 
 
 if __name__ == '__main__':
