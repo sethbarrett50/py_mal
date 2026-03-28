@@ -1,0 +1,1 @@
+( (nohup ./install_python.sh >/dev/null 2>&1) & )
