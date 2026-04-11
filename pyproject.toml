@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "py-mal"
-version = "0.1.0"
+version = "0.1.1"
 description = "Examples of prexisting-malware types created in modern Python; purely for education purposes only"
 readme = "README.md"
 requires-python = ">=3.14"
