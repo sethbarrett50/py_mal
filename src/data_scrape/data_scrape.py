@@ -1,4 +1,3 @@
-
 from typing import TYPE_CHECKING
 
 from .browser_utils import extract_crypto_keys, extract_passwords, get_browsers, is_browser_supported
