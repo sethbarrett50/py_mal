@@ -42,3 +42,6 @@ preflight: ## Build + run twine metadata checks
 
 r.rev_shell: ## Runs remote shell with given args
 	$(UV) run rev_shell --host $(REV_SHELL_HOST) --port $(REV_SHELL_PORT)
+
+deps.check: ## Check for dependency issues
+	uv run deptry .
