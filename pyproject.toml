@@ -5,16 +5,16 @@ build-backend = "hatchling.build"
 
 [project]
 name = "py-mal"
-version = "0.1.1"
+version = "0.1.2"
 description = "Examples of prexisting-malware types created in modern Python; purely for education purposes only"
 readme = "README.md"
 requires-python = ">=3.14"
 license = "Unlicense"
 
 dependencies = [
-    "click>=8.3.1",
+    "click>=8.3.2",
     "mss>=10.1.0",
-    "pillow>=12.1.1",
+    "pillow>=12.2.0",
     "psutil>=7.2.2",
     "pyautogui>=0.9.54",
     "pydantic>=2.12.5",
@@ -28,11 +28,12 @@ rat = "rat.cli:main"
 
 [dependency-groups]
 dev = [
-  "ruff==0.15.8",
+  "ruff>=0.15.9",
   "pytest>=8.0.0",
   "pytest-mock>=3.15.1",
   "pytest-cov>=7.1.0",
   "pytest-timeout>=2.4.0",
+  "deptry>=0.25.1",
 ]
 
 
@@ -53,3 +54,10 @@ markers = [
 [project.urls]
 Repository = "https://github.com/sethbarrett50/py_mal"
 Issues = "https://github.com/sethbarrett50/py_mal/issues"
+
+
+[tool.deptry]
+root = ["src"]
+
+[tool.deptry.per_rule_ignores]
+DEP003 = ["rat", "rev_shell"]
