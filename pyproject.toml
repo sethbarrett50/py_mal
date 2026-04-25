@@ -34,6 +34,7 @@ dev = [
   "pytest-cov>=7.1.0",
   "pytest-timeout>=2.4.0",
   "deptry>=0.25.1",
+  "twine>=6.2.0",
 ]
 
 
