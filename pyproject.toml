@@ -5,11 +5,11 @@ build-backend = "hatchling.build"
 
 [project]
 name = "py-mal"
-version = "0.1.2"
+version = "0.1.3"
 description = "Examples of prexisting-malware types created in modern Python; purely for education purposes only"
 readme = "README.md"
 requires-python = ">=3.14"
-license = "Unlicense"
+license = { text = "PolyForm Noncommercial 1.0.0" }
 
 dependencies = [
     "click>=8.3.2",
@@ -29,11 +29,12 @@ rat = "rat.cli:main"
 [dependency-groups]
 dev = [
   "ruff>=0.15.9",
-  "pytest>=8.0.0",
+  "pytest>=9.0.3",
   "pytest-mock>=3.15.1",
   "pytest-cov>=7.1.0",
   "pytest-timeout>=2.4.0",
   "deptry>=0.25.1",
+  "twine>=6.2.0",
 ]
 
 
