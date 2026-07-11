@@ -12,7 +12,7 @@ requires-python = ">=3.14"
 license = { text = "PolyForm Noncommercial 1.0.0" }
 
 dependencies = [
-    "click>=8.4.1,<9",
+    "click>=8.4.2,<9",
     "mss>=10.2.0,<11",
     "pillow>=12.2.0,<13",
     "psutil>=7.2.2,<8",
